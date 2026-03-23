@@ -10,7 +10,6 @@
     <name>hello</name>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
 
-    <!-- ✅ ADDED THIS BLOCK -->
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -27,19 +26,22 @@
 
     <build>
         <plugins>
-            <!-- ✅ UPDATED THIS PLUGIN -->
+            
+            <!-- ✅ Compiler Plugin (correct) -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
             </plugin>
 
+            <!-- ✅ FIXED WAR Plugin -->
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.5</version>
+                <version>3.3.2</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
